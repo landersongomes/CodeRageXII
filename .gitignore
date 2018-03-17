@@ -10,4 +10,5 @@
 /ClientImagem/HeaderFooterApplication.dproj.local
 /ClientImagem/HeaderFooterApplication.identcache
 /ClientImagem/*
+/ClientImagem/Android/*
 /ServerImagem/Win32/Debug/*.dcu
