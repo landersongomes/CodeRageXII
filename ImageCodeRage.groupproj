@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B86DB6FE-7D0D-44A3-BD8A-8C83FE13615C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ServerImagem\ServerImagem.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClientImagem\HeaderFooterApplication.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ServerImagem">
+        <MSBuild Projects="ServerImagem\ServerImagem.dproj"/>
+    </Target>
+    <Target Name="ServerImagem:Clean">
+        <MSBuild Projects="ServerImagem\ServerImagem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServerImagem:Make">
+        <MSBuild Projects="ServerImagem\ServerImagem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HeaderFooterApplication">
+        <MSBuild Projects="ClientImagem\HeaderFooterApplication.dproj"/>
+    </Target>
+    <Target Name="HeaderFooterApplication:Clean">
+        <MSBuild Projects="ClientImagem\HeaderFooterApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HeaderFooterApplication:Make">
+        <MSBuild Projects="ClientImagem\HeaderFooterApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ServerImagem;HeaderFooterApplication"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ServerImagem:Clean;HeaderFooterApplication:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ServerImagem:Make;HeaderFooterApplication:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
