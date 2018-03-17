@@ -10,3 +10,4 @@
 /ClientImagem/HeaderFooterApplication.dproj.local
 /ClientImagem/HeaderFooterApplication.identcache
 /ClientImagem/*
+/ServerImagem/Win32/Debug/*.dcu
