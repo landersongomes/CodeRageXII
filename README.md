@@ -3,5 +3,5 @@ Exemplo de upload de arquivo via Datasnap REST apresentado na Code Rage XII Bras
 
 Neste exemplo abordo como efetuar o upload de imagens de um client mobile android para um Servidor Datasnap REST.
 
-Veja mais na postagem: http://vivaitaocara.com.br/landersongomes/embarcadero/delphi/transferindo-imagem-via-datasnap-rest-parte-3
+Veja mais na postagem: http://landersongomes.com.br/embarcadero/delphi/transferindo-imagem-via-datasnap-rest-parte-3
 
